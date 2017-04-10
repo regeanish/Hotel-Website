@@ -1,0 +1,39 @@
+[
+    {
+        "PostID": 1,
+        "Title":"MY First Post",
+        "Content":"Some Content",
+        "Comments":[
+            {
+            "CommentID": 1,
+            "Content": "Commenting on your first post"
+            }
+        ],
+        "autor": {
+            "ID":1,
+            "DisplayName": "Anish Rege"
+        }
+    },
+    {
+        "PostID": 2,
+        "Title":"MY Second Post",
+        "Content":"Some Content",
+        "Comments":
+        [
+            {
+            "CommentID": 2,
+            "Content": "Commenting on your second post"
+            },
+            {
+            "CommentID": 3,
+            "Content": "Commenting on your third post"
+            },
+        ]
+    },
+    {
+        "PostID": 3,
+        "Title":"MY third Post",
+        "Content":"Some Content",
+    }
+
+]
