@@ -1,4 +1,6 @@
 
+// rooms and reviews are subdocument here.
+
 [{
     "name": "Corinthia Hotel Budapest",
     "stars": 5,
