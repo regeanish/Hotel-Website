@@ -351,27 +351,24 @@ Hotel
         
 };
 
+module.exports.hotelsDeleteOne = function(req, res) {
+  var hotelId = req.params.hotelId;
 
-module.exports.hotelsDeleteOne = function (req, res){
-
-    Hotel
-        .findByIdAndRemove(hotelId)
-        .exec(function(err, hotel){
-            if(err){
-                res
-                    .status(400)
-                    .json(err);
-            } else {
-
-                console.log("Hotel deleted suuccesfullly by id : " , hotelId);
-                    res
-                    .status(204)
-                    .json();
-            }
-        });
-
-}
-
+  Hotel
+    .findByIdAndRemove(hotelId)
+    .exec(function(err, location) {
+      if (err) {
+        res
+          .status(404)
+          .json(err);
+      } else {
+        console.log("Hotel deleted, id:", hotelId);
+        res
+          .status(204)
+          .json();        
+      }
+    });
+};
 
 
 
