@@ -13,7 +13,6 @@ var bodyParser = require('body-parser');
 app.set('port',3000);
 
 
-
 // to get these static files log put it always above the static file path. 
 // middlewares do run sequentially. The order of the middlware is important.
 // this function would display the method and url used in the console.
@@ -31,8 +30,7 @@ next();
 
 // middleware which would directly route to the file if thats available in the public folder
 app.use(express.static(path.join(__dirname,'public')));
-
-
+app.use('/node_modules',express.static(__dirname+ '/node_modules'));
 
 app.use(bodyParser.urlencoded({extended: false}));
 
